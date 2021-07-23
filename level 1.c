@@ -4,16 +4,22 @@ int main()
 {
 	int a;
 	int b;
-	int c;
-	
+	double first;
+	double second;
+	double third;	
+		
 	scanf("%d", &a);
 	scanf("%d", &b);
-	scanf("%d", &c);
 	
-	printf("%d\n",(a+b)%c);
-	printf("%d\n",((a%c) + (b%c))%c);
-	printf("%d\n",(a*b)%c);
-	printf("%d",((a%c)*(b%c))%c);
+	first = b-(ceil(b/10)*10);
+	second = ceil(b/10)-(ceil(b/100)*10);
+	third = ceil(b/100);
 	
+	printf("%.f\n",a*first);
+	printf("%.f\n",a*second);
+	printf("%.f\n",a*third);
+	printf("%d",a*b);
+	
+
 	return 0;
 }
